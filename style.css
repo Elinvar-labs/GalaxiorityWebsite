@@ -1,0 +1,289 @@
+/* style.css */
+
+:root {
+    --color-dark-bg: #0a0a1a;
+    --color-primary: #4CAF50; /* Green accent for sci-fi/tech feel */
+    --color-secondary: #2196F3; /* Blue accent */
+    --color-text: #e0e0ff;
+    --color-card-bg: #1a1a33;
+    --color-border: #333366;
+    --font-main: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-dark-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(10, 10, 26, 0.95);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: radial-gradient(circle at top left, rgba(33, 153, 243, 0.1), transparent 50%), var(--color-dark-bg);
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--color-secondary);
+}
+
+.banner-image {
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.badges {
+    margin-top: 30px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.status { background-color: #FFC107; color: #212121; }
+.version { background-color: var(--color-secondary); color: white; }
+.license { background-color: #4CAF50; color: white; }
+.platform { background-color: #3f51b5; color: white; }
+
+/* Content Sections */
+.content-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dark-bg {
+    background-color: #13132b; /* Slightly lighter dark background for contrast */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--color-primary);
+    text-align: center;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+strong {
+    color: var(--color-text);
+}
+
+/* Feature List Styling */
+#features ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#features li {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#features li strong {
+    color: var(--color-secondary);
+}
+
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+thead th {
+    background-color: var(--color-secondary);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1f1f3a;
+}
+
+tbody tr:hover {
+    background-color: #282850;
+}
+
+/* Code Blocks */
+pre {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--color-border);
+}
+
+code {
+    font-family: monospace;
+    color: #90ee90; /* Light green for code */
+}
+
+/* Installation Specifics */
+.installation-code code {
+    color: #aaffaa;
+}
+
+/* Controls Table */
+#controls table {
+    border: 2px solid var(--color-primary);
+}
+
+#controls th {
+    background-color: var(--color-primary);
+    color: var(--color-dark-bg);
+}
+
+#controls td {
+    background-color: var(--color-card-bg);
+}
+
+.note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Project Structure Tree */
+.project-structure code {
+    white-space: pre-wrap; /* Ensures long lines wrap */
+    color: #aaffaa;
+}
+
+/* Roadmap List Styling */
+#roadmap ul {
+    list-style: none;
+}
+
+#roadmap li {
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--color-border);
+    display: flex;
+    align-items: center;
+}
+
+#roadmap li:last-child {
+    border-bottom: none;
+}
+
+#roadmap li:before {
+    content: '•';
+    color: var(--color-primary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#roadmap li[style*="[x]"] {
+    color: var(--color-primary);
+}
+
+#roadmap li[style*="[ ]"] {
+    color: #777;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(10, 10, 26, 0.95);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid var(--color-border);
+}
+
+footer p {
+    color: #aaa;
+}

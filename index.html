@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Galaxiority - Space Action</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Google Fonts for a sci-fi look (e.g., Orbitron or similar) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Placeholder for logo.png -->
+                <img src="doc/logo.png" alt="Galaxority Banner" class="banner-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Project</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#tech">Technology Stack</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#controls">Controls</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div align="center">
+                <!-- The provided banner content -->
+                <div class="banner-content">
+                    <img src="doc/logo.png" alt="Galaxority Banner" class="banner-image">
+                    <h1>Cosmic 3D Action with Enemy Waves and Boss Battles</h1>
+                    <div class="badges">
+                        <a href="#" class="badge status">Status: In Development (Yellow)</a>
+                        <a href="#" class="badge version">Version: 0.2.0 (Blue)</a>
+                        <a href="LICENSE" class="badge license">License: MIT (Green)</a>
+                        <a href="#" class="badge platform">Platform: PC-9CF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h2>📖 About the Project</h2>
+            <p class="tagline">🚀 *Keep distance, maneuver, and fire rockets against the most dangerous targets.*</p>
+            <p><strong>Project Galaxiority</strong> — a third-person space action game. The player controls a fighter jet, deflects attacks from waves of enemy ships across four classes, dodges asteroids, and battles bosses that appear every fifth wave.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="content-section dark-bg">
+            <h2>✨ Features</h2>
+            <ul>
+                <li>🛸 <strong>Four Enemy Classes</strong> — Light, Medium, Heavy, and Boss. Each class has its own model (Striker, Insurgent, Dispatcher, Zenith), with unique speed, durability, and weaponry characteristics</li>
+                <li>🌊 <strong>Wave System</strong> with gradually increasing difficulty. Every fifth wave is a boss wave with escort ships</li>
+                <li>🎯 <strong>Two Types of Weapons for the Player</strong>: Twin lasers on the wings and a heavy self-guiding rocket in the engine nozzle</li>
+                <li>💥 <strong>Enemy Behavior</strong>: Closing distance to the player and maintaining preferred distance, side maneuvering with periodic direction changes, and firing only upon hitting the aiming cone</li>
+                <li>🪨 <strong>Destructible Asteroids</strong> with individual durability reserves and respawning in the area around the player</li>
+                <li>❤️ <strong>Status Indication</strong>: Health bars above enemies and a separate health bar for the boss at the top of the screen</li>
+                <li>🧭 <strong>Enemy Indicators</strong>: On-screen indicators for enemies out of sight</li>
+                <li>🌌 <strong>Procedural Skybox</strong>, starfield, and particle system for explosions</li>
+                <li>🎮 <strong>Gamepad and Keyboard Support</strong></li>
+            </ul>
+            <img src="doc/gameplay.gif" alt="In game Screenshot" class="feature-image">
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="tech" class="content-section">
+            <h2>🛠️ Technology Stack</h2>
+            <div align="center">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Technology</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Engine</td>
+                            <td>Raylib</td>
+                        </tr>
+                        <tr>
+                            <td>Language</td>
+                            <td>Python 3.11</td>
+                        </tr>
+                        <tr>
+                            <td>Graphics</td>
+                            <td>Raylib (3D)</td>
+                        </tr>
+                        <tr>
+                            <td>Sound</td>
+                            <td>Raylib</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="installation" class="content-section dark-bg">
+            <h2>📦 Installation</h2>
+            <pre class="installation-code"><code >
+# Clone the repository
+git clone https://github.com/Elinvar-labs/Project_Galaxiority
+
+# Navigate to the directory
+cd Project_Galaxiority
+
+# Install dependencies
+uv sync
+
+# Run the game
+uv run project-galaxiority
+            </code></code></pre>
+        </section>
+
+        <!-- Controls Section -->
+        <section id="controls" class="content-section">
+            <h2>🎮 Controls</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Keyboard/Mouse</th>
+                        <th>Gamepad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Aim (yaw/pitch)</td><td>Mouse / Arrows</td><td>Left Stick</td></tr>
+                    <tr><td>Roll</td><td>A / D</td><td>Right Stick X</td></tr>
+                    <tr><td>Thrust</td><td>W / S + Scroll</td><td>RT / LT</td></tr>
+                    <tr><td>Brake</td><td>Space</td><td>B (Right Face Right)</td></tr>
+                    <tr><td>Acceleration</td><td>Shift</td><td>A (Right Face Down)</td></tr>
+                    <tr><td><strong>Main Weapon</strong></td><td><strong>LMB / Ctrl</strong></td><td><strong>RB</strong> (<code>RIGHT_TRIGGER_1</code>)</td></tr>
+                    <tr><td><strong>Secondary Weapon</strong></td><td><strong>RMB / Alt</strong></td><td><strong>LB</strong> (<code>LEFT_TRIGGER_1</code>)</td></tr>
+                    <tr><td>Restart on Death</td><td>Enter / Space / Y</td><td>Start</td></tr>
+                    <tr><td>Exit</td><td>Esc</td><td>Start (Hold)</td></tr>
+                </tbody>
+            </table>
+            <p class="note">#### Gamepads are also supported.</p>
+        </section>
+
+        <!-- Enemies Section -->
+        <section id="enemies" class="content-section dark-bg">
+            <h2>👾 Enemy Classes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Model</th>
+                        <th>HP</th>
+                        <th>Weaponry</th>
+                        <th>Characteristic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Light</strong></td><td><code>Striker.gltf</code></td><td>30</td><td>Single shots, ~1.3 per second</td><td>High speed, low durability</td></tr>
+                    <tr><td><strong>Medium</strong></td><td><code>Insurgent.gltf</code></td><td>90</td><td>Double burst, ~1.8 per second</td><td>Balanced characteristics</td></tr>
+                    <tr><td><strong>Heavy</strong></td><td><code>Dispatcher.gltf</code></td><td>240</td><td>Triple spread, ~1.0 per second</td><td>Low speed, high damage</td></tr>
+                    <tr><td><strong>Boss</strong></td><td><code>Zenith.gltf</code></td><td>1800</td><td>Wide spread of five cannons</td><td>Separate health bar</td></tr>
+                </tbody>
+            </table>
+            <p class="enemy-behavior">All classes include the following behavior: closing distance to the player and maintaining a preferred distance; side maneuvering with periodic direction changes; firing only upon hitting the aiming cone; returning to combat zone upon excessive distance from the player.</p>
+        </section>
+
+        <!-- Waves Section -->
+        <section id="waves" class="content-section">
+            <h2>🌊 Waves</h2>
+            <ul>
+                <li>Every fifth wave is a boss wave: one or more bosses accompanied by medium ships.</li>
+                <li>In regular waves, the composition gradually expands: light, then medium, then heavy.</li>
+                <li>A pause of about three seconds with a countdown in the top of the screen is provided between waves.</li>
+            </ul>
+        </section>
+
+        <!-- Project Structure Section -->
+        <section id="structure" class="content-section dark-bg">
+            <h2>📂 Project Structure</h2>
+            <pre class="project-structure"><code >
+Project_Galaxiority/
+├── assets/
+│   ├── models/
+│   │   ├── asteroids/          # Asteroids and textures
+│   │   └── ships/
+│   │       ├── Striker/glTF/Striker.gltf
+│   │       ├── Insurgent/glTF/Insurgent.gltf
+│   │       ├── Dispatcher/glTF/Dispatcher.gltf
+│   │       └── Zenith/glTF/Zenith.gltf
+│   ├── fonts/                  # UI fonts with Cyrillic support
+│   └── sounds/
+├── src/project_galaxiority/
+│   ├── ship.py                 # Player, weapons, health
+│   ├── enemy.py                # Enemy AI (closing and firing)
+│   ├── enemy_field.py          # Enemy pool, waves, spawn
+│   ├── enemy_types.py          # Configurations for LIGHT/MEDIUM/HEAVY/BOSS
+│   ├── bullet.py               # Projectiles and self-guiding missiles
+│   ├── scene.py                # Loading models, textures, skybox
+│   ├── camera.py               # Camera tracking
+│   ├── particles.py            # Explosions and smoke effects
+│   ├── hud.py                  # Crosshair and auxiliary text
+│   └── main.py                 # Scene orchestrator and game loop
+└── README.md
+            </code></code></pre>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="content-section">
+            <h2>🗺️ Roadmap</h2>
+            <ul>
+                <li>[x] Basic ship control</li>
+                <li>[x] Weapon system (lasers and missiles)</li>
+                <li>[x] Enemy AI: closing, maneuvering, firing on cone</li>
+                <li>[x] Wave system and boss waves</li>
+                <li>[x] Ship models by class (Striker, Insurgent, Dispatcher, Zenith)</li>
+                <li>[x] Enemy and boss health bars</li>
+                <li>[x] On-screen indicators for out-of-sight enemies</li>
+                <li>[ ] Multiplayer</li>
+            </ul>
+        </section>
+
+        <!-- Balance Section -->
+        <section id="balance" class="content-section dark-bg">
+            <h2>⚖️ Balance</h2>
+            <p>Key numerical parameters are located in <code id="enemy_types.py">enemy_types.py</code> and at the top of <code id="main.py">main.py</code>. Settings like <code id="ENEMY_SPAWN_DISTANCE">ENEMY_SPAWN_DISTANCE</code>, <code id="ENEMY_INTER_WAVE_DELAY">ENEMY_INTER_WAVE_DELAY</code>, and the <code id="_wave_plan()">_wave_plan()</code> function allow changing difficulty without modifying the AI logic.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div align="center">
+                <p>⭐ Star the project if you find it interesting.</p>
+                <p>Made with Elinvar-labs</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
